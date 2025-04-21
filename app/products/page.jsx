@@ -2,10 +2,10 @@ import React from "react";
 import Btn from "./btn";
 
 const Products = () => {
-  console.log("Hi from Products component");
+  console.log("Hi from Products Server component");
   return (
     <>
-      <section className="mt-20">
+      <section className="text-center">
         <h1>Products</h1>
         <Btn />
       </section>

@@ -14,7 +14,8 @@ pnpm dev
 bun dev
 ```
 
-## Notes
+## Notes:
+
 ```
   - Next.js is SSR by default, but it also supports CSR (Client Side Rendering) and SSG (Static Site Generation).
   - SSR vs CSR
@@ -25,13 +26,16 @@ bun dev
   - RSC: React Server Components
 ```
 
+- usePathname(); Is a hook => get the current pathname => (Can use in: Check Active Link).
+- useRouter(); Is a hook => Same As Link useing for Navigation Without reloading bu can use with <button>.
+
+## Learn More
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
