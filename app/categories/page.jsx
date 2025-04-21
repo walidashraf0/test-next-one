@@ -3,8 +3,7 @@ import React from "react";
 
 const Categories = async () => {
   const data = await fetch("http://localhost:4000/categories", {
-    cache: "force-cache", // Force cache
-    next: { revalidate: 5 }// 5 Seconds
+    cache: "no-cache", // Force cache
   }).then((res) =>
     res.json()
   );
