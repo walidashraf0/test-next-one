@@ -31,6 +31,11 @@ bun dev
 - To ignore folder in routing and you want to hide it in the path in routing => (folderName), But still conatin others folders.
 - To make folder out of route => _folderName.
 
+```
+- loading.jsx in root => loading All Component == Doesn't display component content until data coming.
+- Suspense fallback React Component => loading only the content which it wrap it.
+```
+
 ## Learn More
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
