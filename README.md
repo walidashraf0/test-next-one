@@ -27,7 +27,9 @@ bun dev
 ```
 
 - usePathname(); Is a hook => get the current pathname => (Can use in: Check Active Link).
-- useRouter(); Is a hook => Same As Link useing for Navigation Without reloading bu can use with <button>.
+- useRouter(); Is a hook => Same As Link useing for Navigation Without reloading bu can use with "<button>".
+- To ignore folder in routing and you want to hide it in the path in routing => (folderName), But still conatin others folders.
+- To make folder out of route => _folderName
 
 ## Learn More
 

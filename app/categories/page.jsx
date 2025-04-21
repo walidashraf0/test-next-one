@@ -7,9 +7,9 @@ const Categories = () => {
 
   return (
     <>
-      <section className="mt-20">
-        <h1 className="text-center my-5">Categories</h1>
-        <button
+      <section className="flex justify-between items-center min-h-screen flex-col p-24">
+        <h1 className="text-3xl font-extrabold text-red-600">Categories</h1>
+        {/* <button
           onClick={() => {
             // Routing to products page
             router.push("/products");
@@ -17,7 +17,7 @@ const Categories = () => {
           className="flex mx-auto px-5 py-2 bg-red-600 text-white rounded-2xl"
         >
           Nav To Products
-        </button>
+        </button> */}
       </section>
     </>
   );

@@ -1,13 +1,11 @@
 import React from "react";
-import Btn from "./btn";
 
 const Products = () => {
   console.log("Hi from Products Server component");
   return (
     <>
-      <section className="text-center">
-        <h1>Products</h1>
-        <Btn />
+      <section className="flex justify-between items-center min-h-screen flex-col p-24">
+        <h1 className="text-3xl font-extrabold text-red-600">Products</h1>
       </section>
     </>
   );
