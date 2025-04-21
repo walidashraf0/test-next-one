@@ -1,14 +1,30 @@
-"use client";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import React from "react";
 
-const Categories = () => {
-  const router = useRouter();
+const Categories = async () => {
+  const data = await fetch("http://localhost:4000/categories", {
+    cache: "force-cache", // Force cache
+    next: { revalidate: 5 }// 5 Seconds
+  }).then((res) =>
+    res.json()
+  );
+
+  // const router = useRouter();
 
   return (
     <>
-      <section className="flex justify-between items-center min-h-screen flex-col p-24">
+      <section className="flex justify-start items-center min-h-screen flex-col p-24">
         <h1 className="text-3xl font-extrabold text-red-600">Categories</h1>
+        <div className="w-full mt-16">
+          {data.map((category) => (
+            <h1
+              key={category.id}
+              className="text-xl font-extrabold text-red-600"
+            >
+              {category.name}
+            </h1>
+          ))}
+        </div>
         {/* <button
           onClick={() => {
             // Routing to products page

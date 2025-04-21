@@ -22,14 +22,14 @@ bun dev
   - SSR: Server Side Rendering, to make componenets (client or interactive) components, we need to use the "use client" directive at the top of the file.
   - CSR: Client Side Rendering => Hooks, State Management, Events, and other client-side features are available.
   - SSG: Static Site Generation
-  - ISR: Incremental Static Regeneration
+  - ISR: Incremental Static Regeneration: Caching on revalidate time => categories component.
   - RSC: React Server Components
 ```
 
 - usePathname(); Is a hook => get the current pathname => (Can use in: Check Active Link).
 - useRouter(); Is a hook => Same As Link useing for Navigation Without reloading bu can use with "<button>".
 - To ignore folder in routing and you want to hide it in the path in routing => (folderName), But still conatin others folders.
-- To make folder out of route => _folderName
+- To make folder out of route => _folderName.
 
 ## Learn More
 

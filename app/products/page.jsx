@@ -1,24 +1,33 @@
-import React from "react";
+"use client"; // This is a client component
+import React, { useEffect, useState } from "react";
 
 const Products = () => {
+  const [data, setDate] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("http://localhost:4000/products").then((res) =>
+        res.json()
+      );
+      console.log(res)
+      setDate(res);
+    };
+    fetchData();
+  }, []);
   console.log("Hi from Products Server component");
   return (
     <>
       <section className="flex justify-between items-center min-h-screen flex-col p-24">
         <h1 className="text-3xl font-extrabold text-red-600">Products</h1>
+        {data.map((product) => (
+          <div key={product.id} className="flex flex-col gap-2">
+            <h1 className="text-2xl font-bold">{product.name}</h1>
+            <p className="text-lg font-semibold">{product.description}</p>
+            <p className="text-lg font-semibold">{product.price}$</p>
+          </div>
+        ))}
       </section>
     </>
   );
 };
 
 export default Products;
-
-/**
- * Next.js is SSR by default, but it also supports CSR (Client Side Rendering) and SSG (Static Site Generation).
- * SSR vs CSR
- * SSR: Server Side Rendering, to make componenets (client or interactive) components, we need to use the "use client" directive at the top of the file.
- * CSR: Client Side Rendering => Hooks, State Management, Events, and other client-side features are available.
- * SSG: Static Site Generation
- * ISR: Incremental Static Regeneration
- * RSC: React Server Components
- */
